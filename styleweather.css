@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: poppins sans-serif; */
+    box-sizing: border-box;
+    line-height: 30px; 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: lightblue;
+}
+.wrapper {
+    background-color: rgb(247, 247, 234) ;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.5);
+    
+    
+}
+
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 16px 15px;
+  font-size: 25px;
+  /* font-weight: 100px; */
+  color: rgb(122, 122, 218);
+  border-bottom: 1px solid rgb(199, 182, 182);
+}
+.main-txt{
+    cursor: pointer;
+    margin:10px;
+    font-size:30px;
+}
+.wrapper .active .header{
+    font-size:30px;
+    margin-left:5px;
+}
+.wrapper .input-txt{
+    margin: 20px 25px 30px;
+ 
+}
+.wrapper.active .input-txt{
+    display:none;
+}
+.input-txt .info-error{
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.info-error.notvalid{
+    display: block;
+color:#721c24;
+background: #f8d7da;
+border: 1px solid #f5c5cb;
+}
+.info-error.pending{
+    display: block;
+    color: #0c5460;;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    }
+.input-txt :where(input,button){
+    width: 100%;
+    height:55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+.input-txt input{
+    border: 1px solid #eeecec;
+    text-align: center;
+    padding: 0 15px;
+}
+.input-txt input:is(:focus, :valid){
+    border: 2px solid #43affc;
+}
+.input-part .info-txt{
+   display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+.input-txt .seperator{
+    height:1px;
+    width:100%;
+    margin: 100px 0px;
+    background: #ccc;
+    position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -2px;
+   
+}
+.seperator-txt{
+    content:"OR";
+   background: rgb(247, 247, 234) ;
+   font-size: 20px;
+   width: 50px;
+   color: rgb(192, 185, 185);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 160px;
+margin-top: 0px;
+    
+    
+}
+.input-txt button{
+    color: #fff;
+    cursor: pointer;
+    background: #c1d6e6;
+    transition : 0.3s ease;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .weather-part{
+   margin:30px 0 10px;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column; 
+   
+}
+ .active .weather-part{
+    display:flex;
+}
+.weather-part img{
+    max-width: 125px;
+    
+}
+.weather-part .temp{
+    display: flex;
+    font-size: 30px;
+    font-weight: 400;
+}
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin:10px 5px 0 0;
+    display: block;
+}
+.weather-part .weather{
+    font-size: 20px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+.weather-part .location{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.location{
+    font-size:22px;
+    margin-right: 5px;
+
+}
+.weather-part .bottom-details{
+    border-top: 1px solid #bfbfbf;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-details .column{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding:15px 0;
+}
+.numb{
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.column.humidity{
+    border-left: 1px solid #bfbfbf;
+    margin-left: 100px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    font-size: 20px;
+}
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight:500;
+    margin-top: -3px;
+    margin-right: 10px;
+    font-family: cursive;
+}
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    padding:0px 2px 0px 1px;
+}
+  
